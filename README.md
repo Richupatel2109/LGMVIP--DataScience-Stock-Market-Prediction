@@ -1,91 +1,75 @@
-# 📈 Time Series Forecasting using Stacked LSTM
+# 📈 Stock Market Prediction Using Stacked LSTM
 
-This project demonstrates how to use a **Stacked LSTM (Long Short-Term Memory)** model for time series prediction. The notebook walks through data preprocessing, model construction, training, and evaluation using TensorFlow/Keras.
-
----
-
-## 🧠 What is a Stacked LSTM?
-
-Stacked LSTMs are deep LSTM networks that allow multiple LSTM layers to learn hierarchical temporal representations of sequential data. This approach improves model learning for complex patterns in time series.
+This project demonstrates how to predict stock prices using a **Stacked LSTM (Long Short-Term Memory)** model. The dataset used consists of historical stock prices of NSE-TATAGLOBAL, and the model is built using TensorFlow/Keras.
 
 ---
 
-## 📁 Project Structure
+## 🚀 How to Run
 
-```
-stacked-lstm-sequence-prediction/
-├── using_stackedLSTM.ipynb       # Main notebook
-├── data/                         # Input data (if needed)
-├── requirements.txt              # Python dependencies
-├── README.md                     # Project documentation
-```
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/stacked-lstm-sequence-prediction.git
-cd stacked-lstm-sequence-prediction
+git clone https://github.com/yourusername/stock-lstm-predictor.git
+cd stock-lstm-predictor
 ```
-
-### 2. Set up a virtual environment (optional but recommended)
-
-```bash
-python3 -m venv venv
-source venv/bin/activate     # On Windows: venv\Scripts\activate
-```
-
-### 3. Install Python dependencies
-
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
+### 3. Open the Notebook
+##### Open notebooks/Stock_Prediction_LSTM.ipynb in Jupyter or Colab to run the full model training and prediction workflow.
+---
+## 🧠 Model Overview
 
-### 4. Launch Jupyter Notebook
+  Model Architecture: 3 stacked LSTM layers + Dense
+  
+  Loss Function: Mean Squared Error
+
+  Optimizer: Adam
+  
+  Sequence Length: 100
+  
+  Prediction Target: Closing stock price
+---
+## 📊 Output Visualization
+
+Red: Original training data
+
+Blue: Predicted training data
+
+Green: Predicted test data
+
+---
+## 📦 Dependencies
+
+All dependencies are listed in requirements.txt. Key libraries include:
+
+    numpy
+    pandas
+    matplotlib
+    seaborn
+    sklearn
+    tensorflow
+---
+## 📁 Dataset
+
+The dataset is a CSV file named NSE-TATAGLOBAL.csv, containing:
+
+    Open, High, Low, Last, Close
+
+    Total Trade Quantity
+
+    Turnover (in Lacs)
+
+    Date
+---
+### 📦 requirements.txt
 
 ```bash
-jupyter notebook
-```
-
-### 5. Open the notebook and run all cells
-
-Navigate to `using_stackedLSTM.ipynb` in the Jupyter interface and execute each cell step-by-step to view results.
-
----
-
-## 📊 Features Demonstrated
-
-- Time series data preprocessing
-- Normalization using `MinMaxScaler`
-- Splitting data into train/test sequences
-- Building stacked LSTM architecture using `Sequential` API
-- Model evaluation using MSE/MAE
-- Visualization of predictions vs actual values
-
----
-
-## 🛠 Tools & Libraries
-
-- Python 3.9+
-- TensorFlow & Keras
-- NumPy, Pandas
-- Matplotlib
-- Scikit-learn
-
----
-## 📃 License
-
-This project is open-source and available under the [MIT License](LICENSE).
----
-## 📦 requirements.txt
-And here's your requirements.txt:
-
 numpy
-matplotlib
 pandas
-tensorflow
+matplotlib
+seaborn
 scikit-learn
-notebook
+tensorflow
+```
+---
