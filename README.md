@@ -79,3 +79,13 @@ Navigate to `using_stackedLSTM.ipynb` in the Jupyter interface and execute each 
 ## 📃 License
 
 This project is open-source and available under the [MIT License](LICENSE).
+---
+## 📦 requirements.txt
+And here's your requirements.txt:
+
+numpy
+matplotlib
+pandas
+tensorflow
+scikit-learn
+notebook
